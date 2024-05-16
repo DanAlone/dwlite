@@ -1,0 +1,110 @@
+import React, { useState } from 'react';
+import BoxGroup from './BoxGroup.js';
+import {
+    Icon,
+    Button,
+    Popup,
+    Menu,
+    Tab
+} from 'semantic-ui-react';
+import PKG from '../../package.json';
+
+function BoxContainer({ DWLITE_ACTION_CHOICE, onRefresh, onLoading, handleError, inverted, invertedStyle, Refresh }) {
+
+    const [ACTION] = useState(DWLITE_ACTION_CHOICE);
+
+    const S_FILTER = localStorage.getItem("DWLITE_STATUS") || "";
+
+    const [VIEW, setVIEW] = useState("BOX");
+
+    const [loading, setLoading] = useState(false);
+    const handleLoading = (l) => setLoading(l);
+
+    const [status_filter, setStatusFilter] = useState(S_FILTER);
+    const handleStatusFilter = (s) => {
+        setStatusFilter(s);
+        localStorage.setItem("DWLITE_STATUS", s);
+    };
+
+    const [ok, setOK] = useState(0);
+    const [ko, setKO] = useState(0);
+    const [old, setOLD] = useState(0);
+    const [partial, setPARTIAL] = useState(0);
+    const [disabled, setDISABLED] = useState(0);
+    const [total, setTOTAL] = useState(0);
+
+    const handleOK = (o) => { setOK(o); }
+    const handleKO = (o) => { setKO(o); }
+    const handleOLD = (o) => { setOLD(o); }
+    const handlePARTIAL = (o) => { setPARTIAL(o); }
+    const handleDISABLED = (o) => { setDISABLED(o); }
+    const handleTOTAL = (o) => { setTOTAL(o); }
+
+    const panes = [
+        {
+            menuItem: "BOX", color: 'white', render: () =>
+                <BoxGroup
+                    inverted={inverted}
+                    invertedStyle={invertedStyle}
+                    onLoading={onLoading}
+                    handleError={handleError}
+                    onRefresh={onRefresh}
+                    status_filter={status_filter}
+                    handleOK={handleOK}
+                    handleKO={handleKO}
+                    handleOLD={handleOLD}
+                    handlePARTIAL={handlePARTIAL}
+                    handleDISABLED={handleDISABLED}
+                    handleTOTAL={handleTOTAL}
+                    ACTION={ACTION}
+                    handleLoading={handleLoading}
+                    Refresh={Refresh}
+                />
+        },
+        {
+            menuItem: 'TABLE', render: () => 
+                <div><h1 style={{color: 'white'}}>TABLE</h1></div>
+        }
+    ]
+
+
+    return (
+        <>
+            <div className={"box_container " + (invertedStyle)}>
+                <div id="bmenu_container">
+                    <Menu id="fixed_bmenu" className="ui fixed" inverted={inverted}>
+                        <Popup content="select [ALL] status" trigger={
+                            <Button inverted={inverted} onClick={() => handleStatusFilter("")} className="ui bmenu blue button "><div className="bmenu_lbl">{total}</div></Button>
+                        } inverted />
+                        <Popup content="select [ok] status" trigger={
+                            <Button inverted={inverted} onClick={() => handleStatusFilter("ok")} className="ui bmenu green button "><div className="bmenu_lbl">{ok}</div></Button>
+                        } inverted />
+                        <Popup content="select [ko] status" trigger={
+                            <Button inverted={inverted} onClick={() => handleStatusFilter("ko")} className="ui bmenu red button "><div className="bmenu_lbl">{ko}</div></Button>
+                        } inverted />
+                        <Popup content="select [partial] status" trigger={
+                            <Button inverted={inverted} onClick={() => handleStatusFilter("partial")} className="ui bmenu orange button "><div className="bmenu_lbl">{partial}</div></Button>
+                        } inverted />
+                        <Popup content="select [old] status" trigger={
+                            <Button inverted={inverted} onClick={() => handleStatusFilter("old")} className="ui bmenu yellow button "><div className="bmenu_lbl">{old}</div></Button>
+                        } inverted />
+                        <Popup content="select [disabled] status" trigger={
+                            <Button inverted={inverted} onClick={() => handleStatusFilter("disabled")} className="ui bmenu grey button "><div className="bmenu_lbl">{disabled}</div></Button>
+                        } inverted />
+                        <Popup header="Refresh" content={<p>One (1) click to refresh <br></br> Double (2) click to update ALL</p>} trigger={
+                            <Button inverted={inverted} color="blue" className="ui bmenu" onClick={Refresh}>
+                                <div className="bmenu_lbl">
+                                    <Icon loading={loading} name="sync alternate" />
+                                </div>
+                            </Button>
+                        } inverted />
+                    </Menu>
+                </div>
+                <Tab menu={{ pointing: false, fluid: false, inverted: inverted, secondary: true, attached: false, tabular: false }} renderActiveOnly={true} defaultActiveIndex={0} panes={panes} />
+            </div>
+            <div id="info_version">DWLite&reg; v. {PKG.version}</div>
+        </>
+    )
+}
+
+export default BoxContainer;

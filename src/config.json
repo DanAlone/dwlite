@@ -1,0 +1,18 @@
+{
+    "SERVER": "http://dwlite",
+    "HOST": "dwlite react",
+    "API_URL": "http:/slaawmge2f00.enelint.global:81",
+    "LOGIN_URL": "/dwlite_check_login2.php",
+    "GET_ITEMS": "/dwlite_check_dynamic3.php",
+    "GET_SELECT": "/dwlite_select2.php",
+    "GET_CHECK_ITEMS": "/dwlite_check_item.php",
+    "GET_VALIDATION": "/dwlite_validation.php",
+    "AXS_TIMEOUT": 15000,
+    "REFRESH_PAGE": 60000,
+    "DEBUG": 0,
+    "VERSION": "R.1",
+    "THEME_COLORS": {
+      "PRIMARY": "#007bff",
+      "SECONDARY": "#fc3"
+    }
+}
