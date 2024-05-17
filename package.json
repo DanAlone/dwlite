@@ -1,6 +1,6 @@
 {
   "name": "dwlite",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -44,6 +44,7 @@
     "semantic-ui-react": "^2.0.4",
     "serve": "^14.2.3",
     "styled-components": "^6.1.11",
+    "typeface-montserrat": "^1.1.13",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

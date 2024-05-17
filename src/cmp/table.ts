@@ -1,7 +1,7 @@
 export const tableStyle1 = {
     table: {
         style: {
-            fontFamily: 'Lato',
+            fontFamily: 'Montserrat',
             backgroundColor: '#1B1C1D',
         }
     },
@@ -49,12 +49,12 @@ export const tableStyle1 = {
     },
     headRow: {
         style: {
-            fontSize: '1.05em',
+            fontSize: '1.3em',
             fontWeight: 600,
             minHeight: "50px",
             wrap: true,
             whiteSpace: 'break-spaces',
-            color:'#ffffff',
+            color:'grey',
             backgroundColor: '#1B1C1D',
         }
     },
@@ -67,7 +67,6 @@ export const tableStyle1 = {
     cells: {
         style: {
             fontWeight: 300,
-
         },
     },
     rows: {
@@ -115,7 +114,7 @@ export const tableStyle1 = {
 export const tableStyle2 = {
     table: {
         style: {
-            fontFamily: 'Lato',
+            fontFamily: 'Montserrat',
             backgroundColor: '#FFF',
         }
     },
@@ -163,7 +162,7 @@ export const tableStyle2 = {
     },
     headRow: {
         style: {
-            fontSize: '1.05em',
+            fontSize: '1.3em',
             fontWeight: 600,
             minHeight: "50px",
             wrap: true,

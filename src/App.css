@@ -1,3 +1,8 @@
+/* BEGIN FONTS */
+/** =================== MONTSERRAT =================== **/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:regular,bold,italic&subset=latin,latin-ext');
+/* end fonts */
+html, body {font-family:'Montserrat';background-color:#0d0d0d;}
 .App {
   text-align: center;
 }

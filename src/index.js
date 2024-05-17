@@ -5,13 +5,11 @@ import './index.css';
 import './dwlite.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 import 'semantic-ui-css/semantic.min.css';
 import 'react-app-polyfill/stable';
 import 'react-app-polyfill/ie9';
 import 'react-app-polyfill/ie11';
 import 'core-js/stable';
-
 import Login from './Login.js';
 import Main from './Main.js';
 

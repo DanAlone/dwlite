@@ -50,7 +50,7 @@ export default function TableBox({handleSetUpdating, handleUnsetUpdating, handle
         {id: '5', name: 'Area', cellExport: (row) => row.Area, selector: (row) => row.Area, sortable: true},
         {id: '6', name: 'SubArea', cellExport: (row) => row.SubArea, selector: (row) => row.SubArea, sortable: true},
         {id: '7', name: 'Timestamp', cellExport: (row) => row.Timestamp, selector: (row) => row.Timestamp, sortable: true},
-        {id: '8', name: 'Status', cellExport: (row) => row.Status, selector: (row) => row.Order, width: '5%', cell: row => <Box 
+        {id: '8', name: 'Status', cellExport: (row) => row.Status, selector: (row) => row.Order, width: '6%', cell: row => <Box 
             PARENT="TABLEBOX"
             key={row.Id_detail}
             area={row.Area}
@@ -133,13 +133,15 @@ export default function TableBox({handleSetUpdating, handleUnsetUpdating, handle
                     fixedHeader
                     highlightOnHover
                     responsive
+                    dense
+                    striped
+                    defaultSortFieldId='8'
+                    defaultSortAsc={false}
+                    sortIcon={<Icon className="caret down"/>}
+                    //subHeaderAlign='center'
                     //pagination
                     //paginationPerPage={10}
                     //paginationRowsPerPageOptions={[10, 15, 20]}
-                    striped
-                    subHeaderAlign='center'
-                    defaultSortFieldId='8'
-                    defaultSortAsc={false}
                     //noDataComponent='no data'
             />
             </DataTableExtensions>
