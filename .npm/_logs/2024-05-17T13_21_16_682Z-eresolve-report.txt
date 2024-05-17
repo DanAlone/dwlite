@@ -1,0 +1,90 @@
+'Log files:
+C:\Users\danzalone\Documents\GitHub\dwlite\.npm\_logs\2024-05-17T13_21_16_682Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: react-scripts@3.4.4
+Found: typescript@5.4.5
+node_modules/typescript
+  typescript@"^5.4.5" from the root project
+  peer typescript@">=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta" from tsutils@3.21.0
+  node_modules/tsutils
+    tsutils@"^3.17.1" from @typescript-eslint/eslint-plugin@2.34.0
+    node_modules/@typescript-eslint/eslint-plugin
+      peer @typescript-eslint/eslint-plugin@"2.x" from eslint-config-react-app@5.2.1
+      node_modules/eslint-config-react-app
+        eslint-config-react-app@"^5.2.1" from react-scripts@3.4.4
+        node_modules/react-scripts
+          react-scripts@"^3.0.1" from the root project
+      @typescript-eslint/eslint-plugin@"^2.10.0" from react-scripts@3.4.4
+      node_modules/react-scripts
+        react-scripts@"^3.0.1" from the root project
+    tsutils@"^3.17.1" from @typescript-eslint/typescript-estree@2.34.0
+    node_modules/@typescript-eslint/typescript-estree
+      @typescript-eslint/typescript-estree@"2.34.0" from @typescript-eslint/experimental-utils@2.34.0
+      node_modules/@typescript-eslint/experimental-utils
+        @typescript-eslint/experimental-utils@"2.34.0" from @typescript-eslint/eslint-plugin@2.34.0
+        node_modules/@typescript-eslint/eslint-plugin
+          peer @typescript-eslint/eslint-plugin@"2.x" from eslint-config-react-app@5.2.1
+          node_modules/eslint-config-react-app
+            eslint-config-react-app@"^5.2.1" from react-scripts@3.4.4
+            node_modules/react-scripts
+              react-scripts@"^3.0.1" from the root project
+          @typescript-eslint/eslint-plugin@"^2.10.0" from react-scripts@3.4.4
+          node_modules/react-scripts
+            react-scripts@"^3.0.1" from the root project
+        @typescript-eslint/experimental-utils@"2.34.0" from @typescript-eslint/parser@2.34.0
+        node_modules/@typescript-eslint/parser
+          peer @typescript-eslint/parser@"^2.0.0" from @typescript-eslint/eslint-plugin@2.34.0
+          node_modules/@typescript-eslint/eslint-plugin
+            peer @typescript-eslint/eslint-plugin@"2.x" from eslint-config-react-app@5.2.1
+            node_modules/eslint-config-react-app
+              eslint-config-react-app@"^5.2.1" from react-scripts@3.4.4
+              node_modules/react-scripts
+                react-scripts@"^3.0.1" from the root project
+            @typescript-eslint/eslint-plugin@"^2.10.0" from react-scripts@3.4.4
+            node_modules/react-scripts
+              react-scripts@"^3.0.1" from the root project
+          peer @typescript-eslint/parser@"2.x" from eslint-config-react-app@5.2.1
+          node_modules/eslint-config-react-app
+            eslint-config-react-app@"^5.2.1" from react-scripts@3.4.4
+            node_modules/react-scripts
+              react-scripts@"^3.0.1" from the root project
+          @typescript-eslint/parser@"^2.10.0" from react-scripts@3.4.4
+          node_modules/react-scripts
+            react-scripts@"^3.0.1" from the root project
+      @typescript-eslint/typescript-estree@"2.34.0" from @typescript-eslint/parser@2.34.0
+      node_modules/@typescript-eslint/parser
+        peer @typescript-eslint/parser@"^2.0.0" from @typescript-eslint/eslint-plugin@2.34.0
+        node_modules/@typescript-eslint/eslint-plugin
+          peer @typescript-eslint/eslint-plugin@"2.x" from eslint-config-react-app@5.2.1
+          node_modules/eslint-config-react-app
+            eslint-config-react-app@"^5.2.1" from react-scripts@3.4.4
+            node_modules/react-scripts
+              react-scripts@"^3.0.1" from the root project
+          @typescript-eslint/eslint-plugin@"^2.10.0" from react-scripts@3.4.4
+          node_modules/react-scripts
+            react-scripts@"^3.0.1" from the root project
+        peer @typescript-eslint/parser@"2.x" from eslint-config-react-app@5.2.1
+        node_modules/eslint-config-react-app
+          eslint-config-react-app@"^5.2.1" from react-scripts@3.4.4
+          node_modules/react-scripts
+            react-scripts@"^3.0.1" from the root project
+        @typescript-eslint/parser@"^2.10.0" from react-scripts@3.4.4
+        node_modules/react-scripts
+          react-scripts@"^3.0.1" from the root project
+
+Could not resolve dependency:
+peerOptional typescript@"^3.2.1" from react-scripts@3.4.4
+node_modules/react-scripts
+  react-scripts@"^3.0.1" from the root project
+
+Conflicting peer dependency: typescript@3.9.10
+node_modules/typescript
+  peerOptional typescript@"^3.2.1" from react-scripts@3.4.4
+  node_modules/react-scripts
+    react-scripts@"^3.0.1" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
