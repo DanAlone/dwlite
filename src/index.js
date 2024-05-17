@@ -15,6 +15,8 @@ import Main from './Main.js';
 
 const root = createRoot(document.getElementById("root"));
 
+require('typeface-montserrat');
+
 root.render (
   //<React.StrictMode>
   <BrowserRouter>

@@ -5,8 +5,6 @@ import { Navigate } from 'react-router-dom';
 function App() { 
   const isLogged = localStorage.getItem("isLoggedin");
   const token = localStorage.getItem("jwt");
-  
-  require('typeface-montserrat');
 
   if ((isLogged === "true") && (token !== "")) {
     return <Navigate to="/home" />;
