@@ -43,14 +43,8 @@ export default function TableBox({handleSetUpdating, handleUnsetUpdating, handle
     };
 
     const columns = [
-        {id: '1', name: 'Application', cellExport: (row) => row.CodeName, selector: (row) => row.CodeName, sortable: true},
-        {id: '2', name: 'Item', cellExport: (row) => row.name, selector: (row) => row.name, width: '25%', cell: (row) => (<><Icon className={GetInfoItem("icon", row.role) + ' large ' + row.Status_color}/>{row.name}</>), sortable: true, omit: detail},
-        {id: '3', name: 'Code', cellExport: (row) => row.code, selector: (row) => row.code, sortable: true},
-        {id: '4', name: 'Environment', cellExport: (row) => row.env, selector: (row) => row.env, sortable: true},
-        {id: '5', name: 'Area', cellExport: (row) => row.Area, selector: (row) => row.Area, sortable: true},
-        {id: '6', name: 'SubArea', cellExport: (row) => row.SubArea, selector: (row) => row.SubArea, sortable: true},
-        {id: '7', name: 'Timestamp', cellExport: (row) => row.Timestamp, selector: (row) => row.Timestamp, sortable: true},
-        {id: '8', name: 'Status', cellExport: (row) => row.Status, selector: (row) => row.Order, width: '6%', cell: row => <Box 
+        {id: '1', name: 'Status', cellExport: (row) => row.Status, selector: (row) => row.Order, width: '10%', cell: row =>
+        <Box 
             PARENT="TABLEBOX"
             key={row.Id_detail}
             area={row.Area}
@@ -91,7 +85,14 @@ export default function TableBox({handleSetUpdating, handleUnsetUpdating, handle
             handleSetLabelProgress={handleSetLabelProgress}
             updating={updating}
             />, 
-            sortable: true},
+        sortable: true},
+        {id: '2', name: 'Application', cellExport: (row) => row.CodeName, selector: (row) => row.CodeName, sortable: true},
+        {id: '3', name: 'Item', cellExport: (row) => row.name, selector: (row) => row.name, width: '25%', cell: (row) => (<><Icon className={GetInfoItem("icon", row.role) + ' large ' + row.Status_color}/>{row.name}</>), sortable: true, omit: detail},
+        {id: '4', name: 'Code', cellExport: (row) => row.code, selector: (row) => row.code, sortable: true},
+        {id: '5', name: 'Environment', cellExport: (row) => row.env, selector: (row) => row.env, sortable: true},
+        {id: '6', name: 'Area', cellExport: (row) => row.Area, selector: (row) => row.Area, sortable: true},
+        {id: '7', name: 'SubArea', cellExport: (row) => row.SubArea, selector: (row) => row.SubArea, sortable: true},
+        {id: '8', name: 'Timestamp', cellExport: (row) => row.Timestamp, selector: (row) => row.Timestamp, width: '15%', sortable: true},
     ];
 
     useEffect(() =>{
@@ -133,9 +134,9 @@ export default function TableBox({handleSetUpdating, handleUnsetUpdating, handle
                     fixedHeader
                     highlightOnHover
                     responsive
-                    dense
+                    //dense
                     striped
-                    defaultSortFieldId='8'
+                    defaultSortFieldId='1'
                     defaultSortAsc={false}
                     sortIcon={<Icon className="caret down"/>}
                     //subHeaderAlign='center'

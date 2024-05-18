@@ -179,7 +179,7 @@ export const tableStyle2 = {
     },
     cells: {
         style: {
-            fontWeight: 300,
+            fontWeight: 400,
         },
     },
     rows: {
