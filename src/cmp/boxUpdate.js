@@ -27,7 +27,7 @@ function BoxUpdate({ area, codename, id, status, status_color, status_txt, statu
                 </Grid.Row>
                 <Grid.Row columns={3}>
                     <Grid.Column width={8}>
-                        <Header.Subheader className="ui mygray">
+                        <Header.Subheader style={{ whiteSpace: 'nowrap' }} className="ui mygray">
                             <Item.Image><Icon name="building" size="big" /></Item.Image>
                             <Item.Content style={{ whiteSpace: 'nowrap' }}>
                                 <Header.Subheader style={{ color: 'white' }}>{area}</Header.Subheader>
@@ -36,7 +36,7 @@ function BoxUpdate({ area, codename, id, status, status_color, status_txt, statu
                         </Header.Subheader>
                     </Grid.Column>
                     <Grid.Column>
-                        <Header.Subheader className='ui mygray'>
+                        <Header.Subheader style={{ whiteSpace: 'nowrap' }} className='ui mygray'>
                             <Item.Image><Icon name="barcode" size="big" /></Item.Image>
                             <Item.Content style={{ whiteSpace: 'nowrap' }}>
                                 <Header.Subheader style={{ color: 'white' }}>{code}</Header.Subheader>
