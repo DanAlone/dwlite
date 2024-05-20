@@ -7,7 +7,7 @@ import 'react-data-table-component-extensions/dist/index.css';
 import  { tableStyle1, tableStyle2 } from './table.ts';
 import getTime from './getTime.js';
 import CONF from '../config.json';
-import GetInfoItem from './GetInfoItem.js';
+//import GetInfoItem from './GetInfoItem.js';
 //import { Icon } from 'semantic-ui-react'
 import axios from 'axios';
 import PostCall from './postcall.js';
@@ -27,24 +27,24 @@ export default function TableUsers({handleSetUpdating, handleUnsetUpdating, hand
 
     console.log("TSTYLE: " + inverted);
 
-    var newBoxs = boxtable;
+    //var newBoxs = boxtable;
 
-    function onUpdateItem(i, itm) {
-        if (DEBUG) console.log(getTime(), "UPDATE: " + i + " " + itm.Timestamp);
-        newBoxs = boxtable.map(obj =>
-            obj.Id === i ? {
-                ...obj, Timestamp: itm.Timestamp,
-                Status: itm.Status,
-                Status_color: itm.Status_color,
-                Status_txt: itm.Status_txt,
-                Order: GetInfoItem("order", itm.Status)
-            }
-                : obj
-        );
-        handleInitArray(newBoxs);
-        CountStatus(newBoxs);
-        //setData(newBoxs);
-    };
+    //function onUpdateItem(i, itm) {
+    //    if (DEBUG) console.log(getTime(), "UPDATE: " + i + " " + itm.Timestamp);
+    //    newBoxs = boxtable.map(obj =>
+    //        obj.Id === i ? {
+    //            ...obj, Timestamp: itm.Timestamp,
+    //            Status: itm.Status,
+    //            Status_color: itm.Status_color,
+    //            Status_txt: itm.Status_txt,
+    //            Order: GetInfoItem("order", itm.Status)
+    //        }
+    //            : obj
+    //    );
+    //    handleInitArray(newBoxs);
+    //    CountStatus(newBoxs);
+    //    //setData(newBoxs);
+    //};
 
     const params = { 'ACTION': "LIST" };
     const options = PostCall("users", params);
