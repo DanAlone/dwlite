@@ -401,7 +401,7 @@ function Main() {
                     {(() => {
                         switch (container) {
                             case "BOXTABLE": return <BoxContainer handleOpenDimmer={handleOpenDimmer} handleCloseDimmer={handleCloseDimmer} search={search} getData={getData} viewnoitems={viewnoitems} viewdisabled={viewdisabled} handleExpandItem={handleExpandItem} VIEW={VIEW} Refresh={Refresh} inverted={inverted} invertedStyle={invertedStyle} backToLogin={backToLogin} handleError={handleError} handleRotate={handleRotate} handleDate={handleDate} key={refresh} ACTION={ACTION} />;
-                            case "CONFIG": return (<MainConfig inverted={DWLITE_STYLE}/>);
+                            case "CONFIG": return (<MainConfig inverted={DWLITE_STYLE} handleError={handleError} handleRotate={handleRotate} invertedStyle={invertedStyle} />);
                             default: return (<BoxContainer handleOpenDimmer={handleOpenDimmer} handleCloseDimmer={handleCloseDimmer} search={search} getData={getData} viewnoitems={viewnoitems} viewdisabled={viewdisabled} handleExpandItem={handleExpandItem} VIEW={VIEW} Refresh={Refresh} inverted={inverted} invertedStyle={invertedStyle} backToLogin={backToLogin} handleError={handleError} handleRotate={handleRotate} handleDate={handleDate} key={refresh} ACTION={ACTION} />);
                         }
                     })()}

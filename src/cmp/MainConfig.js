@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Container, TabPane, Tab, Icon } from 'semantic-ui-react'
+import TableUsers from './TableUsers.js';
 
-function MainConfig({inverted}){
+function MainConfig({invertedStyle, inverted, handleError, handleRotate }){
 
     const [ styled, setStyled ] = useState('');
     const [ styled2, setStyled2 ] = useState(false);
@@ -15,7 +16,7 @@ function MainConfig({inverted}){
         </TabPane> },
     { menuItem: {content: <span><Icon className="users large"></Icon> <Icon className="edit grey"/>Users</span> }, render: () => 
         <TabPane className={styled}>
-            USERS
+            <TableUsers handleError={handleError} handleRotate={handleRotate} invertedStyle={invertedStyle} inverted={inverted} />
         </TabPane> },
     { menuItem: {content: <span><Icon className="sitemap large"></Icon> <Icon className="edit grey"/>Items</span> }, render: () => 
         <TabPane className={styled}>

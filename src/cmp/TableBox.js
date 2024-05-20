@@ -134,7 +134,7 @@ export default function TableBox({handleSetUpdating, handleUnsetUpdating, handle
                     fixedHeader
                     highlightOnHover
                     responsive
-                    //dense
+                    dense
                     striped
                     defaultSortFieldId='1'
                     defaultSortAsc={false}

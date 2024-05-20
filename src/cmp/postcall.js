@@ -28,6 +28,9 @@ export default function PostCall(caller, params) {
         case "validation":
             script = CONF.GET_VALIDATION;
             break;
+        case "users":
+            script = CONF.GET_USERS;
+            break;
         default: break;
     }
 

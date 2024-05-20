@@ -7,10 +7,11 @@
     "GET_SELECT": "/dwlite_select2.php",
     "GET_CHECK_ITEMS": "/dwlite_check_item.php",
     "GET_VALIDATION": "/dwlite_validation.php",
+    "GET_USERS": "/dwlite_conf_users2.php",
     "AXS_TIMEOUT": 15000,
     "REFRESH_PAGE": 60000,
-    "DEBUG": 0,
-    "VERSION": "R.1",
+    "DEBUG": 1,
+    "VERSION": "R.1.3.1",
     "THEME_COLORS": {
       "PRIMARY": "#007bff",
       "SECONDARY": "#fc3"
